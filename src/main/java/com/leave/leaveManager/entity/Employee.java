@@ -5,28 +5,27 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Entity
 @Table(name = "EMPLOYEE")
-    public class Employee{
+@Data
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long emp_id;
-
+    private Long empId;
     private String name;
     private String location;
     private String designation;
-    private  long manager_id;
+    private Long managerId;
     private String status;
-    private long paid_leave_balance;
-    private long casual_leave_balance;
-    private LocalDate joining_date;
-    private LocalTime created_at;
-    private LocalTime Updated_at;
-
-
+    private Long paidLeaveBalance;
+    private Long casualLeaveBalance;
+    private LocalDate joiningDate;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }

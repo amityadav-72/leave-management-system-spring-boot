@@ -1,3 +1,11 @@
 spring:
-  application:
-    name: leaveManager
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=LeaveManagement;encrypt=true;trustServerCertificate=true
+    username: springuser
+    password: amityadav72
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
