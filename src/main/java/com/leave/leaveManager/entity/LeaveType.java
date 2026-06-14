@@ -1,14 +1,16 @@
 package com.leave.leaveManager.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
-@Table(name="LeaveType")
- public class LeaveType{
+@Table(name = "LEAVE_TYPE")
+@Data
+public class LeaveType {
 
     @Id
-    private int leave_id;
-    private String leave_name;
-    private String leave_description;
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long leaveId;
+    private String leaveName;
+    private String leaveDescription;
 }
